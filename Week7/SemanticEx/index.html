@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    ​ ​
+    <section id="search">
+        <h2>Search</h2>
+        <label for="hero-name">Hero name</label>
+        <input id="hero-name" type="text" />
+        <!-- ... -->
+    </section>
+    ​
+    <section id="heroes">
+        <h2>Heroes results</h2>
+        <article>
+            <h3>Batman</h3>
+            <button>
+                <img src="https://placekitten.com/408/287" />
+            </button>
+            <div class="details hidden">
+                <dl>
+                    <dt>ID</dt>
+                    <dd>69</dd>
+                    <dt>Power stats</dt>
+                    <dd>
+                        <dl>
+                            <dt>Combat</dt>
+                            <dd>75</dd>
+                            <dt>Intelligence</dt>
+                            <dd>70</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                    <dt>Appearance</dt>
+                    <dd>
+                        <dl>
+                            <dt>Something</dt>
+                            <dd>Some value</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+        </article>
+        <article>
+            <h3>Batman II</h3>
+            <button>
+                <img src="https://placekitten.com/408/289" />
+            </button>
+            <div class="details hidden">
+                <dl>
+                    <dt>ID</dt>
+                    <dd>69</dd>
+                    <dt>Power stats</dt>
+                    <dd>
+                        <dl>
+                            <dt>Combat</dt>
+                            <dd>75</dd>
+                            <dt>Intelligence</dt>
+                            <dd>70</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                    <dt>Appearance</dt>
+                    <dd>
+                        <dl>
+                            <dt>Something</dt>
+                            <dd>Some value</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+        </article>
+        <article>
+            <h3>Batman III</h3>
+            <button>
+                <img src="https://placekitten.com/408/283" />
+            </button>
+            <div class="details hidden">
+                <dl>
+                    <dt>ID</dt>
+                    <dd>69</dd>
+                    <dt>Power stats</dt>
+                    <dd>
+                        <dl>
+                            <dt>Combat</dt>
+                            <dd>75</dd>
+                            <dt>Intelligence</dt>
+                            <dd>70</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                    <dt>Appearance</dt>
+                    <dd>
+                        <dl>
+                            <dt>Something</dt>
+                            <dd>Some value</dd>
+                            <dt>...</dt>
+                            <dd>...</dd>
+                        </dl>
+                    </dd>
+                </dl>
+            </div>
+        </article>
+        <!-- ... -->
+    </section>
+    ​
+    <section id="movies">
+        <!-- ... -->
+    </section>
+    ​
+    <script>
+        for (let buttonNode of document.querySelectorAll("button")) {
+            buttonNode.addEventListener("click", () => {
+                const parentArticleNode = buttonNode.parentElement;
+                parentArticleNode.querySelector(".details").classList.remove("hidden");​
+                for (let articleNode of document.querySelectorAll("article")) {
+                    if (articleNode === parentArticleNode) {
+                        articleNode.classList.remove("hidden");
+                    } else {
+                        articleNode.classList.add("hidden");
+                    }
+                }​
+            })
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

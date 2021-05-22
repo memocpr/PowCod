@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>articles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="main">
+        <form>
+            <input type="text" id="search" />
+            <label>Sort By</label>
+            <select id="sortBy">
+                <option value="publishedAt">Publish Date</option>
+                <option value="popularity">Popularity</option>
+              </select>
+            <button id="search-news" type="button" class="search-news">
+                Search
+              </button>
+        </form>
+        <div id="news-details" class="news-details">
+        </div>
+    </section>
+    <!-- <label for='site-seach'>Search the Topic</label>
+        <input type="search" id="site-search" name="site-search" aria-label="SEARCH The Topic!">
+        <button type="button">search</button>-->
+    <script src="script.js"></script>
+</body>
+
+</html>

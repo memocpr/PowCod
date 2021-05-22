@@ -1,0 +1,21 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: blue;
+}
+
+section {
+    background-color: cadetblue;
+}
+
+footer {
+    background-color: green;
+}

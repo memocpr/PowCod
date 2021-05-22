@@ -1,0 +1,138 @@
+/*off canvas menu*/
+
+/*mobile version first*/
+
+html {
+    box-sizing: border-box;
+    font: Helvetica, sans-serif;
+    font-size: 0.625em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-size: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: rgb(155, 209, 235);
+    height: auto;
+    position: fixed;
+    right: -80%;
+    width: 80%;
+    transition: right 1s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+li {
+    flex: 1 15rem;
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 3.5rem;
+    display: block;
+    color: #272626;
+    /*put padding always in a to make clickable place bigger*/
+    padding: 1.5rem;
+}
+
+
+/*======================================================*/
+
+
+/** visually hide elements */
+
+#trigger-nav {
+    opacity: 0.01;
+    position: fixed;
+    right: -10rem;
+    width: 1px;
+}
+
+#trigger-nav+label {
+    border: 4px solid teal;
+    border-width: 4px 0;
+    cursor: pointer;
+    height: 3rem;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    width: 5rem;
+    z-index: 1;
+}
+
+#trigger-nav:checked+label {
+    border: none;
+}
+
+#trigger-nav:checked+label::before {
+    border-color: black;
+    transform: rotate(135deg);
+}
+
+#trigger-nav:checked+label::after {
+    border-color: black;
+    transform: rotate(45deg);
+}
+
+#trigger-nav:checked~nav {
+    right: 0;
+}
+
+label[for="trigger-nav"]::before,
+label[for="trigger-nav"]::after {
+    border-top: 4px solid teal;
+    content: "";
+    display: block;
+    position: relative;
+    top: -1.8rem;
+    width: 100%;
+}
+
+label[for="trigger-nav"]::before {
+    top: 1rem;
+}
+
+span {
+    font-size: 1px;
+    opacity: 0.01;
+    width: 1px;
+}
+
+
+/* for tablets and desktop ===============================*/
+
+@media screen and (min-width: 50em) {
+    nav {
+        width: 100%;
+        position: static;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav a {
+        padding: 2rem;
+        /*to make font size responsive as well*/
+        font-size: 2.5vw;
+    }
+    label[for="trigger-nav"] {
+        display: none;
+    }
+}

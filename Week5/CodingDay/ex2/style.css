@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*::before,
+*::after {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body>* {
+    border: 1px solid rgb(211, 211, 211);
+}
+
+h2 {
+    color: green;
+}
+
+p {
+    color: grey;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    flex: 2;
+}
+
+section {
+    flex: 6;
+    background-color: rgb(188, 200, 212);
+}
+
+span {
+    flex: 1;
+}
+
+article {
+    margin: 5px 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border-bottom: 1px solid rgb(211, 211, 211);
+    align-self: flex-start;
+    color: lightslategray;
+}
+
+a {
+    text-decoration: none;
+}

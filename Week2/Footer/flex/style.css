@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: yellow;
+}
+
+header {
+    background-color: blue;
+}
+
+footer {
+    background-color: green;
+}
+
+main {
+    flex: auto;
+}

@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+    font: 1.1em/1.4em Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    display: block;
+    margin: 5px;
+}
+
+h1 {
+    display: block;
+    font-size: 3em;
+}
+
+main {
+    display: grid;
+    /* repeat: size & minmax */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    border: 4px solid rgb(48, 84, 85);
+    border-radius: 4px;
+}
+
+section {
+    background-color: cadetblue;
+    margin: 0.3em;
+    padding: 0.3em;
+    border-radius: 4px;
+    color: #ffffff;
+}

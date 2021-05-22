@@ -1,0 +1,36 @@
+@media (max-width:600px) {
+    body,
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .content,
+    main {
+        flex: auto;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    background-color: bisque;
+}
+
+section {
+    background-color: coral;
+}
+
+section:nth-child(2) {
+    background-color: cornflowerblue;
+}
+
+section:nth-child(3) {
+    background-color: goldenrod;
+}
+
+footer {
+    background-color: indianred;
+}

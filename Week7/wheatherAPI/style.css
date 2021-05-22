@@ -1,0 +1,55 @@
+* html {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(to right, blue, red);
+    text-align: center;
+    color: white;
+    padding: 30px;
+    width: 70%;
+    margin: 100px;
+    margin-bottom: 0;
+    border-radius: 20px;
+}
+
+main {
+    border: 3px solid rgb(6, 6, 65);
+    padding-top: 60px;
+    margin: 100px;
+    width: 70%;
+    height: 50vh;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 1px;
+}
+
+label {
+    font-size: 20px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: rgb(184, 60, 11);
+    color: white;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin: 40px;
+    margin-left: 80px;
+}
+
+button:hover {
+    background-color: rgb(248, 134, 41);
+    color: black;
+    transform: scale(1.0);
+}
+
+select {
+    margin: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 150px;
+    background-color: rgb(44, 135, 219);
+    color: white;
+}

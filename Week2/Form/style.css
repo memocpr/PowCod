@@ -1,0 +1,95 @@
+html {
+    background: lightgrey;
+    box-sizing: border-box;
+    /* rest root sont-size to 10 px */
+    font-size: 0.625em;
+}
+
+* {
+    box-sizing: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background: #ffffff;
+    margin: 5rem auto;
+    padding: 5rem;
+    text-align: center;
+    width: 90%;
+}
+
+h1,
+h2 {
+    color: grey;
+    font-size: 3.8rem;
+    font-weight: normal;
+    margin: 4rem 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+p {
+    margin-bottom: 6rem;
+}
+
+strong {
+    color: black;
+    font-size: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0 3rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+button {
+    background: white;
+    border: 1px solid black;
+    min-width: 25rem;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+
+/** flex solution for 2 column layout 
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+li {
+    flex: 1 0 47.3rem;
+}*/
+
+
+/** only for desktop */
+
+
+/*
+@media only screen and (min-width: 56.250em){
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}*/
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(47.3rem, 1fr));
+    grid-gap: 3rem;
+}

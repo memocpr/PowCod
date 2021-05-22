@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form</title>
+    <link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+
+            <form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+
+                <input type="hidden" name="send_to" value="evo21spm2@gmail.com">
+
+                <fieldset>
+                    <legend>Your contact information</legend>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+
+                    <label for="comments"></label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+
+                </fieldset>
+
+                <button type="submit">Submit</button>
+
+
+            </form>
+
+        </section>
+
+    </div>
+</body>
+
+</html>
